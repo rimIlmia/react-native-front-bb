@@ -1,15 +1,14 @@
-import * as WebBrowser from "expo-web-browser";
 import * as React from "react";
+import { RectButton, ScrollView } from "react-native-gesture-handler";
 import {
   StyleSheet,
   Text,
   View,
-  Button,
   Alert,
   TouchableHighlight,
 } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
-export default function HomeScreen() {
+
+export default function HomePoidsScreen() {
   return (
     <View style={styles.container}>
       <ScrollView
@@ -103,11 +102,6 @@ export default function HomeScreen() {
     </View>
   );
 }
-
-HomeScreen.navigationOptions = {
-  header: null,
-};
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -115,7 +109,7 @@ const styles = StyleSheet.create({
   },
 
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 5,
   },
 
   statutContainer: {
