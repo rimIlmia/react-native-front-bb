@@ -1,10 +1,11 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
+
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import HomeMesureCorpsScreen from "../screens/Home/HomeMesureCorps/HomeMesureCorpsScreen";
-import HomePoidsScreen from "../screens/Home/HomePoidsScreen";
+import HistoriqueScreen from "../screens/Stats/HistoriqueScreen";
+import StatestiquesScreen from "../screens/Stats/StatestiquesScreen";
 const Tab = createMaterialTopTabNavigator();
-export default function HomeScreen() {
+export default function StatsScreen() {
   return (
     <View style={styles.container}>
       <Tab.Navigator
@@ -24,26 +25,31 @@ export default function HomeScreen() {
         }}
       >
         <Tab.Screen
-          name="HomePoids"
-          component={HomePoidsScreen}
+          name="StatestiquesScreen"
+          component={StatestiquesScreen}
           options={{
-            title: "Poids",
+            title: "Statestiques",
           }}
         />
         <Tab.Screen
-          name="HomeMesureCorpsScreen "
-          component={HomeMesureCorpsScreen}
+          name="HistoriqueScreen"
+          component={HistoriqueScreen}
           options={{
-            title: "Mesures corps",
+            title: "Historique",
           }}
         />
       </Tab.Navigator>
     </View>
   );
 }
-
-HomeScreen.navigationOptions = {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  contentContainer: {
+    paddingTop: 15,
+  },
+});
+StatsScreen.navigationOptions = {
   header: null,
 };
-
-const styles = StyleSheet.create({});

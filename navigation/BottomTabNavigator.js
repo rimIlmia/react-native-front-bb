@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import * as React from "react";
 import HomeScreen from "../screens/HomeScreen";
-import LinksScreen from "../screens/LinksScreen";
-import TestScreen from "../screens/TestScreen";
+import StatsScreen from "../screens/StatsScreen";
 import Icon from "react-native-vector-icons/FontAwesome";
+import ChartScreen from "../screens/ChartScreen";
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = "Home";
@@ -41,10 +41,10 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="Statestiques"
+        component={StatsScreen}
         options={{
-          title: "Resources",
+          title: "Statestiques",
           tabBarIcon: ({ focused }) => (
             <Icon
               name="bar-chart"
@@ -55,10 +55,10 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Test"
-        component={TestScreen}
+        name="Chart"
+        component={ChartScreen}
         options={{
-          title: "tests",
+          title: "chart",
           tabBarIcon: ({ focused }) => (
             <Icon
               name="user"
@@ -78,9 +78,8 @@ function getHeaderTitle(route) {
 
   switch (routeName) {
     case "Home":
+    case "Statestiques":
       return "Bonjour Rim";
-    case "Links":
-      return "";
     case "Test":
       return "Bonjour Tests";
   }
