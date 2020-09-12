@@ -43,7 +43,8 @@
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "babel-preset-expo": "~8.1.0",
-    "jest-expo": "~37.0.0"
+    "jest-expo": "~37.0.0",
+    "react-native-select-lists": "^1.0.1"
   },
   "private": true
 }
