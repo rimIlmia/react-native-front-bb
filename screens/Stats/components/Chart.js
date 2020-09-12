@@ -22,7 +22,7 @@ export default function Chart() {
           ],
         }}
         width={Dimensions.get("window").width} // from react-native
-        height={Dimensions.get("window").height / 4}
+        height={Dimensions.get("window").height / 4.2}
         yAxisLabel=""
         yAxisSuffix="kg"
         yAxisInterval={1} // optional, defaults to 1
