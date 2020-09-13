@@ -2,7 +2,7 @@ import * as React from "react";
 import { StyleSheet, View, Text, Dimensions } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Chart from "./components/Chart";
-import { Picker } from "@react-native-community/picker";
+import { Picker } from "react-native";
 
 import { useState } from "react";
 

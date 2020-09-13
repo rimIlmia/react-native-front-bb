@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Dimensions } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import ItemTable from "./ItemTable";
 
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     borderWidth: 2,
     borderColor: "#E5E5E5",
-    height: "1",
+    height: 40,
+    paddingBottom: 15,
   },
   contentContainer: {
     paddingTop: 15,
